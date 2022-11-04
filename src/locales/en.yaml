@@ -1,0 +1,391 @@
+---
+# brand
+project: Invoice
+company: Arternal
+title: Arternal Invoice
+
+# top level site navigation
+nav:
+  invoices:
+    index: All Invoices
+    draft: Drafts
+    sent: Sent
+    viewed: Viewed
+    partiallyPaid: Partially Paid
+    paid: Paid
+    archived: Archived
+  invoice:
+    edit: Edit
+    view: View
+    send: Send
+    payments: Payments
+    notes: Notes
+  templates:
+    heading: Templates
+    index: Invoice Templates
+    edit: Edit
+    details: Details
+  settings:
+    heading: Settings
+    invoice: Invoice Settings
+  arternal:
+    heading: Arternal
+    crm: Return to Dashboard
+  signin: Sign in
+
+# used in combination with "<action>Model" keys
+# intended to dry up "create template", "create invoice", etc.
+models:
+  template: Template
+  invoice: Invoice
+  preset: Preset
+
+# used for prompts and alerts
+messages:
+  default: Default
+  wait: Please wait...
+  saving: Saving...
+  choosePredefined: Choose a predefined template to create a custom template
+  noInvoices: You do not have any invoices
+  noInvoicesFilter: You do not have any invoices that match this filter
+  noTemplates: You do not have any custom templates
+  noAddress: No address provided
+  noContact: No contact provided
+  noContactName: No name provided
+  confirmArchiveInvoice: Are you sure you want to archive this invoice?
+  confirmUnarchiveInvoice: Are you sure you want to unarchive this invoice?
+  invoiceSavedAt: Invoice saved at {time}
+  confirmNewPasscode: Are you sure you want to generate a new passcode?
+  confirmNoPasscode: Are you sure you want to remove this passcode?
+  alertCurrencyMismatch: Currency must be {currency}
+  buyerTaxRate: Shipping address ({city}, {postalCode}) has a tax rate of {taxRate}%
+  noShippingAddress: Enter a shipping address to automatically calculate tax rate
+  taxRateFailed: Could not automatically determine a tax rate for the shipping address
+  invoiceEditsIsolated: Edits made here will only affect this invoice
+  shareUrlCopied: Share link copied
+  passcodeCopied: Passcode copied
+  invoiceArchived: Invoice archived
+  invoiceSent: Invoice sent
+  sendFailed: Could not send, please try again
+  invoiceUpdatedBy: Updated {date} by {name}
+  multipleCurrenciesInInvoice: This invoice has multiple currencies
+  templateDefault: Template set as default
+  confirmTemplateDelete: Are you sure you want to delete this template?
+  templateDeleted: Template deleted
+  templateDuplicated: Template duplicated
+  templateSaved: Template saved
+  confirmLeaveUnsaved: Are you sure you want to leave with unsaved changes?
+  setInstructionsAndTermsInSettings: You can set these additional details in your invoice settings
+  pageNumber: Page {page}
+  predefinedTemplateEdit: To start modifying this predefined template click
+  chooseTemplate: Choose a custom template to create your invoice from
+  chooseTemplateWithInventory: Choose a custom template for your <b>selected artworks ({numWorks})</b>.
+  createInvoice: Creating invoice...
+  createInvoiceError: Invoice could not be created, please try again
+  noDetailPresets: This template does not have any details yet
+  quickbooksTaxAgencyRequired:
+    'QuickBooks requires a tax agency to be selected when adding tax to an invoice.
+    The tax agency should match the region the items are shipping to.'
+  lastQuickbooksSyncDate: 'Synced {date}'
+  quickbooksHomeCurrencyWarning:
+    'The currency for this invoice is {invoiceCurrency} while the QuickBooks currency is {quickbooksHomeCurrency}.
+    This invoice will be entered in QuickBooks as {quickbooksHomeCurrency} without conversions and
+    results in QuickBooks will be inaccurate.'
+  quickbooksInvoiceSyncSuccessful: Invoice synced successfully
+  quickbooksInvoiceSyncFailed: Could not sync invoice
+  quickbooksNoBillingContact: No billing contact set on invoice
+  quickbooksNoTaxAgency: No tax agency selected
+  editContactSafe: Any adjustments made here will not be saved back to your contacts
+  editUserSafe: Any adjustments made here will not be saved back to your associates
+  filteredResults: Currently displaying filtered results
+  noContacts: No contacts available
+  confirmStageChange: Are you sure you want to switch workflow stages? Certain changes will be lost.
+
+# used for buttons and menu items
+# note that "<action>Model" keys should be used with models keys
+actions:
+  createModel: Create {model}
+  edit: Edit
+  editDetails: Edit Details
+  delete: Delete
+  removeLink: Remove Link
+  confirm: Confirm
+  save: Save
+  saveCustom: Save as Custom
+  saveEdits: Save Edits
+  send: Send
+  sendInvoice: Send Email
+  resend: Resend
+  cancel: Cancel
+  back: Back
+  archive: Archive
+  unarchive: Unarchive
+  duplicate: Duplicate
+  useTemplate: Use this Template
+  view: View
+  payments: Payments
+  addPayment: Add a payment
+  notes: Notes
+  addNote: Add a note
+  default: Set as Default
+  signin: Sign in
+  signout: Sign out
+  signoutConfirm: Yes, sign me out
+  downloadPdf: Download PDF
+  pay: Pay Now
+  payOverTime: Pay over time
+  affirmEasyInstallments: Make 4 interest-free payments with zero fees. Prequalify now
+  copy: Copy
+  savePassword: Save Password
+  newPasscode: New Passcode
+  markAsSold: Mark {number} {item} as sold
+  markedAsSold: Marked {number} {item} as sold
+  selectFromInventory: Select From Inventory
+  selectFromInventoryPlaceholder: Search for inventory
+  viewArtwork: View artwork
+  selectFromContactsPlaceholder: Search for contacts
+  selectFromAddressesPlaceholder: Search for addresses
+  selectFromAddresses: Select from addresses
+  selectPaymentInstructions: Choose Payment Instructions
+  selectTermsAndConditions: Choose Terms and Conditions
+  select: Select
+  createLineItem: Create Line Item
+  applyThisTaxRate: Apply this Rate
+  remove: Remove
+  removeDiscount: Remove Discount
+  addDiscount: Add Discount
+  removeTax: Remove Tax
+  addTax: Add Tax
+  addShippingTax: Add Shipping Tax
+  addTerms: Add Terms and Conditions
+  addPaymentInstructions: Add Payment Instructions
+  addDetails: Add Details
+  previewInvoice: Preview Invoice
+  previous: Previous
+  prev: Prev
+  next: Next
+  customizeTemplate: Customize Template
+  placeholders: Placeholders
+  customDetail: Custom Detail
+  syncToQuickbooks: Sync to Quickbooks
+  customizeLabels: Customize Labels
+  manualTax: Add tax manually
+  searchContact: Search for Contact
+  searchUser: Search for Associate
+  clearFilters: Clear Filters
+
+# form labels should have no suffix (eg: "email")
+# placeholders should have "<field>Placeholder" suffix
+# help text should have "<field>Help" suffix
+forms:
+  signin:
+    email: Email address
+    emailPlaceholder: Email address
+    password: Password
+    passwordPlaceholder: Password
+    showPassword: Show Password
+  passcode:
+    protect: Protect with a passcode
+    passcodePlaceholder: Enter Passcode
+    showPasscode: Show Passcode
+  contact:
+    honorific: Honorific
+    firstName: First name
+    lastName: Last name
+    email: Email address
+    phoneHome: Phone (home)
+    phoneOffice: Phone (office)
+    phoneMobile: Phone (mobile)
+    phoneOther: Phone (other)
+  address:
+    line1: Address
+    line2: Address Line 2
+    line1Placeholder: Street address
+    line2Placeholder: Unit number, etc
+    locality: City
+    region: Region
+    country: Country
+    postalCode: Zip/Postal Code
+  saleAddress:
+    name: Full Name/Address Name
+  lineItem:
+    description: Description
+    price: Price ({currency})
+    applyToAllLineItems: Apply to all Line Items
+    taxRate: Tax Rate (%)
+  invoiceEdit:
+    appliedTaxRate: Applied Tax Rate (%)
+    manualTaxRate: Tax Rate (%)
+    manualTaxRatePlaceholder: Enter tax rate
+    isLineItemTaxed: Taxed
+    termsAndPaymentHeader: Terms and Payment Instructions
+    terms: Terms and Conditions
+    paymentInstructions: Payment Instructions
+    newTerms: New Terms and Conditions
+    newPaymentInstructions: New Payment Instructions
+  physicalSale:
+    markAsPhysicalSale: This is an in-person sale
+    physicalSaleTooltip: >-
+      For tax calculation purposes, if this sale was made at an out of state location,
+      an event or fair.
+  send:
+    to: To
+    toHelp: Separate each email address with a space
+    cc: Cc
+    ccHelp: Separate each email address with a space
+    bcc: Bcc
+    bccHelp: Separate each email address with a space
+    subject: Subject
+    message: Message
+  termsAndConditions:
+    notesPlaceholder: Enter terms and conditions to be included in your invoice.
+  paymentInstructions:
+    notesPlaceholder: Enter details regarding any payment instructions. E.g. Bank Wire, Cheque, Credit Card.
+  templateSettings:
+    header: Header
+    headerAlignment: Header alignment
+    headerSize: Header size
+    showCurrencyCode: Show currency codes
+    showPayments: Show payments & remaining balance
+    additionalDetails: Additional details
+    additionalDetailsOwnPage: Move additional details onto a separate page
+    itemCaptionFormat: Item caption format
+    additionalHeading: Additional heading text
+    invoiceNumber: Invoice number label
+    date: Date label
+    billingAddress: Billing address label
+    shippingAddress: Shipping address label
+    subtotal: Subtotal label
+    tax: Tax label
+    shipping: Shipping label
+    total: Total label
+    remainingBalance: Remaining balance label
+    footer: Footer
+    footerAlignment: Footer alignment
+    left: Left
+    center: Center
+    right: Right
+    small: Small
+    medium: Medium
+    large: Large
+    font: Font
+  detailPreset:
+    name: Name
+    namePlaceholder: Preset name
+    content: Content
+    contentPlaceholder: Preset content
+    autoInclude: Automatically include this detail in every invoice
+  contactSearch:
+    searchPlaceholder: Search for Contacts
+  userSearch:
+    searchPlaceholder: Search for Associates
+  quickbooksSync:
+    title: Select a Quickbooks tax agency
+    agency: Tax agency
+    agencyPlaceholder: Select tax agency
+    agencyHelp: Don't see your agency?
+    agencyLink: Find out how to add it
+    shippingTo: Shipping To
+  invoices:
+    search: Search Invoices
+    searchPlaceholder: Search Invoices
+  paymentMethods:
+    title: Select Payment Method
+    paymentEnabled: payment enabled
+    fundsDeposited: Funds will be deposited instantly in your bank account
+    feeBreakdown: Fee Breakdown
+    transactionFee: Transaction fee
+    totalPayout: Total Payout
+    readReviewTerms: Read and review terms of service
+
+components:
+  fileDrop:
+    browse: Click to browse or drop files here
+  nexusDisplay:
+    sales: Sales
+    salesResult: '{amount} of {total}'
+    transactions: Transactions
+    transactionsResult: '{amount} of {total}'
+    lookback: Lookback Period
+    na: Not applicable
+    nexusApproaching: Once you reach 100% of the requirements. You will be responsible for registering and collecting sales tax in this state.
+    nexusReached: You reached 100% of the requirements and are responsible for registering and collecting sales tax in this state.
+    nexusDescription: Economic Nexus determines whether sales tax is required for the shipping state
+  search:
+    location: Location
+    sortBy: Sort by
+    status: Status
+    stage: Stage
+    newestDate: Invoice Date (Newest)
+    oldestDate: Invoice Date (Oldest)
+    newestUpdated: Updated At (Newest)
+    oldestUpdated: Updated At (Oldest)
+    all: All
+
+# page-specific headings and copy only
+# make sure keys that belong in actions or messages do not go here
+pages:
+  signin:
+    title: Sign in
+  signout:
+    title: Sign out
+    confirm: Are you sure you want to sign out?
+  callback:
+    title: Signing In
+  account:
+    title: Your Account
+  invoices:
+    title: Invoices
+  invoiceCreate:
+    title: Create an Invoice
+  invoiceEdit:
+    back: Back to Invoice
+    billTo: Bill To
+    billingAddress: Billing Address
+    shipTo: Ship To
+    shippingAddress: Shipping Address
+    shipToBilling: Shipping address is the same as billing address
+    salesAssociate: Sales Associate
+    artistAssociate: Artist Associate
+    lineItems: Line Items
+    physicalSale: In-Person Sale
+    shipping: Shipping
+    deposit: Deposit
+    currency: Currency
+    taxRate: Tax Rate
+    economicNexus: Economic Nexus
+  invoiceView:
+    title: Preview
+  invoiceSend:
+    title: Send
+  invoicePayments:
+    title: Payments
+  invoiceNotes:
+    title: Notes
+  invoiceSettings:
+    title: Invoice Settings
+    detailPresets: Detail Presets
+  invoiceVerify:
+    title: View Your Invoice
+  templates:
+    title: Templates
+    custom: Custom Templates
+    predefined: Predefined Templates
+  templateEdit:
+    title: Custom Template ({name})
+    predefinedTitle: Predefined Template ({name})
+
+# invoice status
+invoiceStatus:
+  archived: Archived
+  draft: Draft
+  sent: Sent
+  viewed: Viewed
+  views: '{count} Views'
+  paid: Paid
+  partial: Partially Paid
+
+fontSize:
+  regular: Regular font size
+  small: Small font size
+  smallest: Smallest font size

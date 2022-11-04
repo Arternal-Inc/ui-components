@@ -1,0 +1,11 @@
+{
+  "name": "arternal-ui-components",
+  "version": "1.0.0",
+  "description": "Arternal UI Components",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Mir Adnan",
+  "license": "ISC"
+}
