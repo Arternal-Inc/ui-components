@@ -1,1 +1,1 @@
-declare module 'arternal-ui'
+declare module 'arternal-ui';

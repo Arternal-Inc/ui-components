@@ -6,6 +6,7 @@
   "scripts": {
     "test": "jest"
   },
+  "types": "./src/types/index.d.ts",
   "author": "Mir Adnan",
   "license": "ISC"
 }
