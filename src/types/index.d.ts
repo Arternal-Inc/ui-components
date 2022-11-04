@@ -1,1 +1,1 @@
-export * from './images'
+declare module 'arternal-ui'

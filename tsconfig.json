@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "strict": false,
+    "strictNullChecks": true,
+    "moduleResolution": "node",
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es5",
+    "module": "ES2015",
+    "declaration": true,
+    "outDir": "lib",
+    "noImplicitAny": true,
+    "importHelpers": true
+  },
+  "include": ["src", "modules.d.ts"]
+}
