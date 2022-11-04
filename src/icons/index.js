@@ -7,6 +7,7 @@ import InvoicesIcon from './InvoicesIcon.svg';
 import ReportsIcon from './ReportsIcon.svg';
 import SmartMailIcon from './SmartMailIcon.svg';
 import SettingsIcon from './DealsIcon.svg';
+import ArternalIcon from './ArternalIcon.svg';
 
 export {
   DashboardIcon,
@@ -18,4 +19,5 @@ export {
   ReportsIcon,
   SmartMailIcon,
   SettingsIcon,
+  ArternalIcon,
 };
