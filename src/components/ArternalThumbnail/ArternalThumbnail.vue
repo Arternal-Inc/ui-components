@@ -1,22 +1,22 @@
 <script setup lang="ts">
-import { computed } from 'vue'
-import { ImgFallback } from '@/components'
-import { thumbnailUrl } from '@/utils'
+import { computed } from "vue";
+import { ImgFallback } from "../ImgFallback";
+import { thumbnailUrl } from "../../utils";
 
 const props = withDefaults(
   defineProps<{
-    src: string
-    thumbnailWidth?: number | string
-    thumbnailHeight?: number | string
+    src: string;
+    thumbnailWidth?: number | string;
+    thumbnailHeight?: number | string;
   }>(),
   {
     thumbnailWidth: 256,
     thumbnailHeight: 256,
   }
-)
+);
 
-const _width = computed(() => parseInt(props.thumbnailWidth.toString()))
-const _height = computed(() => parseInt(props.thumbnailHeight.toString()))
+const _width = computed(() => parseInt(props.thumbnailWidth.toString()));
+const _height = computed(() => parseInt(props.thumbnailHeight.toString()));
 
 const src = computed(() =>
   thumbnailUrl(
@@ -25,7 +25,7 @@ const src = computed(() =>
     _width.value,
     _height.value
   )
-)
+);
 </script>
 
 <template>
