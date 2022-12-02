@@ -7,6 +7,7 @@ import IBIcon from "./IBIcon.vue";
 import InventoryIcon from "./InventoryIcon.svg";
 import InvoicesIcon from "./InvoicesIcon.svg";
 import PaymentsIcon from "./PaymentsIcon.svg";
+import PrivateAuctionSaleIcon from "./PrivateAuctionSaleIcon.svg";
 import ReportsIcon from "./ReportsIcon.svg";
 import SettingsIcon from "./DealsIcon.svg";
 import SmartMailIcon from "./SmartMailIcon.svg";
@@ -22,6 +23,7 @@ export {
   InventoryIcon,
   InvoicesIcon,
   PaymentsIcon,
+  PrivateAuctionSaleIcon,
   ReportsIcon,
   SettingsIcon,
   SmartMailIcon,
