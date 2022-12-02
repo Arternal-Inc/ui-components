@@ -11,7 +11,6 @@ defineProps<{
     viewBox="0 0 16 16"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    class="mr-1"
     :class="fillClass"
   >
     <path
