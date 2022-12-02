@@ -3,6 +3,7 @@ import AuctionIcon from "./AuctionIcon.svg";
 import ContactsIcon from "./ContactsIcon.svg";
 import DashboardIcon from "./DashboardIcon.svg";
 import DealsIcon from "./DealsIcon.svg";
+import IBIcon from "./IBIcon.vue";
 import InventoryIcon from "./InventoryIcon.svg";
 import InvoicesIcon from "./InvoicesIcon.svg";
 import PaymentsIcon from "./PaymentsIcon.svg";
@@ -17,6 +18,7 @@ export {
   ContactsIcon,
   DashboardIcon,
   DealsIcon,
+  IBIcon,
   InventoryIcon,
   InvoicesIcon,
   PaymentsIcon,
