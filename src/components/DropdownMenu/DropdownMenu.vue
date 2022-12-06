@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { Menu, MenuButton, MenuItems } from '@headlessui/vue'
-import { DotsVerticalIcon } from '@heroicons/vue/outline'
+import { EllipsisVerticalIcon } from '@heroicons/vue/24/solid'
 import { Btn } from '@/components'
 import { Size, Variant, VueClassAttr } from '@@/types'
 
@@ -36,7 +36,7 @@ withDefaults(
           :class="buttonClass"
         >
           <slot name="icon" v-bind="slotProps">
-            <DotsVerticalIcon class="h-6 w-6" />
+            <EllipsisVerticalIcon class="h-6 w-6" />
           </slot>
         </Btn>
       </slot>
