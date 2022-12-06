@@ -35,9 +35,11 @@ withDefaults(
           :borderless="buttonBorderless"
           :class="buttonClass"
         >
+        <template #icon>
           <slot name="icon" v-bind="slotProps">
             <EllipsisVerticalIcon class="h-6 w-6" />
           </slot>
+        </template>  
         </Btn>
       </slot>
     </MenuButton>
