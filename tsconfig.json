@@ -6,12 +6,12 @@
     "noUnusedParameters": true,
     "noUnusedLocals": true,
     "allowSyntheticDefaultImports": true,
-    "target": "es5",
-    "module": "ES2015",
+    "target": "ES6",
+    "module": "CommonJS",
     "declaration": true,
     "outDir": "lib",
     "noImplicitAny": true,
     "importHelpers": true
   },
-  "include": ["src", "modules.d.ts"]
+  "include": ["src", "types/index.d.ts"]
 }
