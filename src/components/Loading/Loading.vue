@@ -1,7 +1,7 @@
 <template>
   <span class="inline-flex items-center gap-2">
     <svg
-      class="ml-2 w-6"
+      class="h-5 w-5"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"
