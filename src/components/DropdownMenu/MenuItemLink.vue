@@ -4,7 +4,7 @@ import { MenuItem } from '@headlessui/vue'
 
 <template>
   <MenuItem v-slot="slotProps" :disabled="!!$attrs.disabled">
-    <router-link
+    <!-- <router-link
       v-bind="$attrs"
       class="cursor-pointer whitespace-nowrap px-3 py-2 text-inherit hover:no-underline"
       :class="{
@@ -13,6 +13,6 @@ import { MenuItem } from '@headlessui/vue'
       }"
     >
       <slot v-bind="slotProps" />
-    </router-link>
+    </router-link> -->
   </MenuItem>
 </template>
