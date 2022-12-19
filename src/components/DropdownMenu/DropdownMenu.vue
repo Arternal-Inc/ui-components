@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { Menu, MenuButton, MenuItems } from '@headlessui/vue'
-import { EllipsisVerticalIcon } from '@heroicons/vue/24/outline'
+import { EllipsisVerticalIcon } from '@heroicons/vue/24/solid'
 import { Btn } from '@/components'
 import { Size, Variant, VueClassAttr } from '@@/types'
 
@@ -12,7 +12,6 @@ withDefaults(
     buttonSize?: Size
     buttonOutline?: boolean
     buttonBorderless?: boolean
-    iconClass?: VueClassAttr
   }>(),
   {
     menuClass: '',
@@ -20,7 +19,6 @@ withDefaults(
     buttonVariant: 'primary',
     buttonSize: 'md',
     buttonBorderless: true,
-    iconClass: '',
   }
 )
 </script>
@@ -39,7 +37,7 @@ withDefaults(
         >
         <template #icon>
           <slot name="icon" v-bind="slotProps">
-            <EllipsisVerticalIcon class="h-6 w-6" :class="iconClass" />
+            <EllipsisVerticalIcon class="h-6 w-6" />
           </slot>
         </template>  
         </Btn>
