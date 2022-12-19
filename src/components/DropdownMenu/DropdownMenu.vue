@@ -12,7 +12,7 @@ withDefaults(
     buttonSize?: Size
     buttonOutline?: boolean
     buttonBorderless?: boolean
-    iconSize?: Size
+    iconClass?: VueClassAttr
   }>(),
   {
     menuClass: '',
@@ -20,7 +20,7 @@ withDefaults(
     buttonVariant: 'primary',
     buttonSize: 'md',
     buttonBorderless: true,
-    iconSize: 'md',
+    iconClass: '',
   }
 )
 </script>
@@ -39,7 +39,7 @@ withDefaults(
         >
         <template #icon>
           <slot name="icon" v-bind="slotProps">
-            <EllipsisVerticalIcon :class="{'h-6 w-6': iconSize === 'md', 'h-8 w-8 stroke-2': iconSize === 'lg'}" />
+            <EllipsisVerticalIcon class="h-6 w-6" :class="iconClass" />
           </slot>
         </template>  
         </Btn>
