@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { Menu, MenuButton, MenuItems } from '@headlessui/vue'
-import { EllipsisVerticalIcon } from '@heroicons/vue/24/solid'
+import { EllipsisVerticalIcon } from '@heroicons/vue/24/outline'
 import { Btn } from '@/components'
 import { Size, Variant, VueClassAttr } from '@@/types'
 
