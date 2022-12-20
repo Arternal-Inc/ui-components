@@ -44,7 +44,7 @@ withDefaults(
       </slot>
     </MenuButton>
 
-    <MenuItems class="group absolute z-10 pb-5" :class="menuClass">
+    <MenuItems class="group absolute z-10 pb-5 group-focus:outline-none" :class="menuClass">
       <div
         class="flex max-h-64 min-w-[200px] flex-col overflow-hidden overflow-y-auto rounded border bg-white shadow-lg ring-primary-500/50 ring-offset-2 group-focus:outline-none group-focus:ring-4"
       >
