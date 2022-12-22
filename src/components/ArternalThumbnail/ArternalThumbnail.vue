@@ -29,5 +29,5 @@ const src = computed(() =>
 </script>
 
 <template>
-  <ImgFallback :src="src" loading="lazy" />
+  <ImgFallback :src="src" loading="lazy" draggable="false" class="bg-gray-100" />
 </template>
