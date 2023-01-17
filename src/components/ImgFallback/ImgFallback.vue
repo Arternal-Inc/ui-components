@@ -20,9 +20,7 @@ const onError = () => {
     :is="showOriginal ? 'img' : 'div'"
     height="1"
     width="1"
-    :class="{ 
-      'animate-pulse': showOriginal,
-      'bg-gray-200': !showOriginal }"
+    :class="{ 'bg-gray-200': !showOriginal }"
     @error="onError"
   />
 </template>
