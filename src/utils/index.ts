@@ -1,4 +1,5 @@
 import cleanJoin from "./cleanJoin";
+import entriesMatch from "./entriesMatch";
 import formatCurrency from "./formatCurrency";
 import formatDate from "./formatDate";
 import formatDateTime from "./formatDateTime";
@@ -8,6 +9,7 @@ import toDollars from "./toDollars";
 
 export {
   cleanJoin,
+  entriesMatch,
   formatCurrency,
   formatDate,
   formatDateTime,
