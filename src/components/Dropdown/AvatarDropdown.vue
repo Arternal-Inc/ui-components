@@ -43,14 +43,14 @@ async function authLogout() {
           <li>
             <a
               :href="env.VITE_CRM_URL + '/settings/profile'"
-              class="block py-2 px-4 hover:bg-zinc-700 dark:hover:bg-gray-600 dark:hover:text-white"
+              class="block py-2 px-4 hover:bg-zinc-700 text-zinc-300 visited:text-zinc-300"
               >Settings</a
             >
           </li>
           <li>
             <a
               :href="env.VITE_CRM_URL + '/dashboard/import-export'"
-              class="block py-2 px-4 hover:bg-zinc-700 dark:hover:bg-gray-600 dark:hover:text-white"
+              class="block py-2 px-4 hover:bg-zinc-700 text-zinc-300 visited:text-zinc-300"
               >Import / Export</a
             >
           </li>
@@ -66,7 +66,7 @@ async function authLogout() {
             <a
               href="//intercom.help/arternal/en/"
               target="_blank"
-              class="block py-2 px-4 hover:bg-zinc-700 dark:hover:bg-gray-600 dark:hover:text-white"
+              class="block py-2 px-4 hover:bg-zinc-700 text-zinc-300 visited:text-zinc-300"
               >Help Center</a
             >
           </li>
@@ -74,7 +74,7 @@ async function authLogout() {
             <a
               href="//intercom.help/arternal/en/articles/4785386-arternal-release-notes"
               target="_blank"
-              class="block py-2 px-4 hover:bg-zinc-700 dark:hover:bg-gray-600 dark:hover:text-white"
+              class="block py-2 px-4 hover:bg-zinc-700 text-zinc-300 visited:text-zinc-300"
               >What's New?</a
             >
           </li>
