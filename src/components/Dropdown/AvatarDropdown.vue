@@ -37,20 +37,20 @@ async function authLogout() {
     <Transition>
       <div
         v-if="isOpen"
-        class="z-10 w-44 bg-zinc-800 rounded divide-y divide-gray-100 shadow ml-2 -mb-1"
+        class="z-10 w-44 bg-zinc-800 rounded divide-y divide-gray-100 shadow ml-3 mb-1"
       >
         <ul class="py-1 text-sm text-gray-300 text-left">
           <li>
             <a
               :href="env.VITE_CRM_URL + '/settings/profile'"
-              class="block py-2 px-4 hover:bg-zinc-700 text-zinc-300 visited:text-zinc-300"
+              class="block py-3 px-4 hover:bg-zinc-700 text-gray-300 visited:text-gray-300 no-underline"
               >Settings</a
             >
           </li>
           <li>
             <a
               :href="env.VITE_CRM_URL + '/dashboard/import-export'"
-              class="block py-2 px-4 hover:bg-zinc-700 text-zinc-300 visited:text-zinc-300"
+              class="block py-3 px-4 hover:bg-zinc-700 text-gray-300 visited:text-gray-300 no-underline"
               >Import / Export</a
             >
           </li>
@@ -66,15 +66,15 @@ async function authLogout() {
             <a
               href="//intercom.help/arternal/en/"
               target="_blank"
-              class="block py-2 px-4 hover:bg-zinc-700 text-zinc-300 visited:text-zinc-300"
-              >Help Center</a
+              class="block py-3 px-4 hover:bg-zinc-700 text-gray-300 visited:text-gray-300 no-underline"
+              >Help Center</a>
             >
           </li>
           <li>
             <a
               href="//intercom.help/arternal/en/articles/4785386-arternal-release-notes"
               target="_blank"
-              class="block py-2 px-4 hover:bg-zinc-700 text-zinc-300 visited:text-zinc-300"
+              class="block py-3 px-4 hover:bg-zinc-700 text-gray-300 visited:text-gray-300 no-underline"
               >What's New?</a
             >
           </li>
@@ -82,7 +82,7 @@ async function authLogout() {
             <button
               type="button"
               @click="authLogout()"
-              class="text-left w-full py-2 px-4 hover:bg-zinc-700 dark:hover:bg-gray-600 dark:hover:text-white"
+              class="block py-3 px-4 hover:bg-zinc-700 text-gray-300 visited:text-gray-300 no-underline"
             >
               Logout
             </button>
