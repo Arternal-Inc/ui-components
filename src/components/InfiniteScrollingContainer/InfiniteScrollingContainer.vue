@@ -1,5 +1,5 @@
 <script lang="coffee">
-  LoadMoreWidget = require '@/components/inventory/LoadMoreWidget'
+  LoadMoreWidget = require '@/components/LoadMoreWidget'
   VirtualList = require 'vue-virtual-scroll-list'
 
   exports.default =
