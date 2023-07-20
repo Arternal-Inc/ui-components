@@ -34,58 +34,97 @@
 
 </script>
 
-<template lang='pug'>
-  .LoadMoreWidget(:class = '[view, { hasMore: hasMore }]', @click = 'startLoad')
-    i.mdi.mdi-loading.mdi-spin(v-if="syncing")
-      p loading...
-    span(v-else :class = '{ disabled: !hasMore }') {{ statusText }}
+<template>
+  <div class="LoadMoreWidget" :class="[view, { hasMore: hasMore }]" @click="startLoad">
+    <i v-if="syncing" class="mdi mdi-loading mdi-spin">
+      <p>loading...</p>
+    </i>
+    <span v-else :class="{ disabled: !hasMore }">{{ statusText }}</span>
+  </div>
 </template>
 
-<style lang='stylus' scoped>
-  @import '~assets/styles/theme'
+<style scoped>
+  .LoadMoreWidget {
+    vertical-align: top;
+    position: relative;
+    background: transparent;
+    margin-bottom: 36px;
+    border-radius: 5px;
+    opacity: 1;
+    text-align: center;
+  }
 
-  .LoadMoreWidget
-    vertical-align top
-    position relative
-    background transparent
-    margin-bottom 36px
-    border-radius 5px
-    opacity 1
-    text-align center
+  .LoadMoreWidget i {
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: darkGray;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+  }
+  .LoadMoreWidget i:hover {
+    color: #2F80ED;
+  }
+  .LoadMoreWidget i:disabled {
+    color: darkGray;
+    opacity: 0.6;
+    cursor: default;
+  }
 
-    i
-      font-size 2rem
-      actionText()
-      p
-        actionText()
-        margin 5px 0
-        font-size 15px
-        text-transform lowercase
+  .LoadMoreWidget i p {
+    margin: 5px 0;
+    font-size: 15px;
+    text-transform: lowercase;
+    color: darkGray;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+  }
+  .LoadMoreWidget i p:hover {
+    color: #2F80ED;
+  }
+  .LoadMoreWidget i p:disabled {
+    color: darkGray;
+    opacity: 0.6;
+    cursor: default;
+  }
 
-    span
-      actionText()
-      align both
-      font-weight 600
-      text-transform none
+  .LoadMoreWidget span {
+    text-transform: none;
+    color: darkGray;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+  }
+  .LoadMoreWidget span:hover {
+    color: #2F80ED;
+  }
+  .LoadMoreWidget span:disabled {
+    color: darkGray;
+    opacity: 0.6;
+    cursor: default;
+  }
 
-    &.grid
-      display inline-block
-      margin-right 10px
-      padding-bottom 10px
-      width 264px
-      height 250px
-      border 2px solid transparent
+  .LoadMoreWidget.grid {
+    display: inline-block;
+    margin-right: 10px;
+    padding-bottom: 10px;
+    width: 264px;
+    height: 250px;
+    border: 2px solid transparent;
+  }
 
-    &.list
-      box-sizing border-box
-      padding 15px 0
-      center(100%)
-      height 60px
+  .LoadMoreWidget.list {
+    box-sizing: border-box;
+    padding: 15px 0;
+    height: 60px;
+  }
 
-    &.hasMore
-      cursor pointer
+  .LoadMoreWidget.hasMore {
+    cursor: pointer;
+  }
 
-      &:hover span
-        color accent
-
+  .LoadMoreWidget.hasMore:hover span {
+    color: #2F80ED;
+  }
 </style>

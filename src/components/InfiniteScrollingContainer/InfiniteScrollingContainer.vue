@@ -72,46 +72,51 @@
       loadMore: -> @$emit 'loadMore' unless @noLoading
 </script>
 
-<template lang="pug">
-  .InfiniteScrollingContainer(ref = 'container')
-    virtual-list.virtualList(
-      v-if = '!novirtualList'
-      :size = 'rowHeight'
-      :remain = 'numShownItems'
-      :onscroll = 'setScroll'
-      :class = '{ maxHeight: maxHeightVirtualList }'
-      )
-      slot
-      load-more-widget(
-        :hideEmptyState = 'hideEmptyState'
-        :view = 'view'
-        :syncing = 'syncing'
-        :hasMore = 'moreItems'
-        @load = 'loadMore'
-        )
-    .noVirtualList(v-else)
-      slot
-      load-more-widget(
-        :hideEmptyState = 'hideEmptyState'
-        :view = 'view'
-        :syncing = 'syncing'
-        :hasMore = 'moreItems'
-        @load = 'loadMore'
-        )
+<template>
+  <div ref="container" class="InfiniteScrollingContainer">
+    <VirtualList class="virtualList"
+      v-if="!novirtualList"
+      :size="rowHeight"
+      :remain="numShownItems"
+      :onscroll="setScroll"
+      :class="{ maxHeight: maxHeightVirtualList }"
+    >
+      <slot />
+      <LoadMoreWidget
+        :hideEmptyState="hideEmptyState"
+        :view="view"
+        :syncing="syncing"
+        :hasMore="moreItems"
+        @load="loadMore"
+      />
+    </VirtualList>
+
+    <div v-else class="noVirtualList">
+      <slot />
+      <LoadMoreWidget
+        :hideEmptyState="hideEmptyState"
+        :view="view"
+        :syncing="syncing"
+        :hasMore="moreItems"
+        @load="loadMore"
+      />
+    </div>
+  </div>
 </template>
 
-<style lang="stylus" scoped>
-  @import '~assets/styles/theme'
+<style scoped>
+  .InfiniteScrollingContainer {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    padding-bottom: 60px;
+  }
 
-  .InfiniteScrollingContainer
-    width 100%
-    height 100%
-    overflow-y auto
-    padding-bottom 60px
+  .virtualList {
+    overflow-x: hidden;
+  }
 
-    .virtualList
-      overflow-x hidden
-
-      &.maxHeight
-        height 100% !important
+  .virtualList.maxHeight {
+    height: 100% !important;
+  }
 </style>

@@ -38,16 +38,13 @@
 
 </script>
 
-<template lang='pug'>
-  .loadingSpinner(ref = 'spinner')
+<template>
+  <div ref="spinner" class="loadingSpinner" />
 </template>
 
-<style lang='stylus'>
-  @import '~theme'
-
-  .loadingSpinner
-    display inline-block
-    position relative 
-    
-
+<style>
+  .loadingSpinner {
+    display: inline-block;
+    position: relative;
+  }
 </style>
