@@ -1,5 +1,5 @@
 <script lang="ts">
-  import LoadMoreWidget from '@/components/LoadMoreWidget'
+  import { LoadMoreWidget } from '@/components/LoadMoreWidget'
   import VirtualList from 'vue-virtual-scroll-list'
   import Vue from 'vue'
 
