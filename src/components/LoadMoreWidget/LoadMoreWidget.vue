@@ -105,6 +105,9 @@ const startLoad = () => {
   opacity: 0.6;
   cursor: default;
 }
+.LoadMoreWidget span:hover:disabled {
+  color: darkGray !important;
+}
 
 .LoadMoreWidget.grid {
   display: inline-block;
