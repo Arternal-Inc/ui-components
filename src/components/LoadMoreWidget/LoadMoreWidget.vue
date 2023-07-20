@@ -1,42 +1,52 @@
-<script lang='coffee'>
-  exports.default =
-    name: 'LoadMoreWidget'
-    props:
-      syncing:
-        type: Boolean
-        default: false
-      hasMore:
-        type: Boolean
-        default: false
-      view:
-        type: String
-        default: 'grid'
-      hideEmptyState:
-        type: [Boolean, String]
-        default: null
+<script lang='ts'>
+  import Vue from 'vue'
 
-    computed:
-      statusText: ->
-        if @syncing
-          'Loading...'
-        else if @hasMore
-          'Load More'
-        else if @hideEmptyState
-          ''
+  export default Vue.extend({
+    name: 'LoadMoreWidget',
+    props: {
+      syncing: {
+        type: Boolean,
+        default: false,
+      },
+      hasMore: {
+        type: Boolean,
+        default: false,
+      },
+      view: {
+        type: String,
+        default: 'grid',
+      },
+      hideEmptyState: {
+        type: [Boolean, String],
+        default: null,
+      },
+    },
+    computed: {
+      statusText(): String {
+        if (this.syncing)
+          return 'Loading...'
+        else if (this.hasMore)
+          return 'Load More'
+        else if (this.hideEmptyState)
+          return ''
         else
-          'No more items'
-
-    methods:
-      startLoad: -> @$emit 'load' if @hasMore
-
+          return 'No more items'
+      },
+    },
+    methods: {
+      startLoad(): void {
+        if (this.hasMore) this.$emit('load')
+      },
+    },
+  })
 </script>
 
 <template>
-  <div class="LoadMoreWidget" :class="[view, { hasMore: hasMore }]" @click="startLoad">
-    <i v-if="syncing" class="mdi mdi-loading mdi-spin">
+  <div class="LoadMoreWidget" :class="[this.view, { hasMore: this.hasMore }]" @click="this.startLoad">
+    <i v-if="this.syncing" class="mdi mdi-loading mdi-spin">
       <p>loading...</p>
     </i>
-    <span v-else :class="{ disabled: !hasMore }">{{ statusText }}</span>
+    <span v-else :class="{ disabled: !this.hasMore }">{{ this.statusText }}</span>
   </div>
 </template>
 
