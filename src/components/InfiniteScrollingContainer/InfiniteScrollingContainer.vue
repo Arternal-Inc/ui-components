@@ -1,6 +1,6 @@
 <script lang="ts">
   // import { LoadMoreWidget } from '../LoadMoreWidget'
-  import { VirtualList } from 'vue-virtual-scroll-list'
+  import VirtualList from '@vue-virtual-scroll-list'
   import Vue from 'vue'
 
   export default Vue.extend({
