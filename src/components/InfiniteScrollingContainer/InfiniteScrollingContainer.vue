@@ -1,11 +1,11 @@
 <script lang="ts">
-  import { LoadMoreWidget } from '../LoadMoreWidget'
+  // import { LoadMoreWidget } from '../LoadMoreWidget'
   import VirtualList from 'vue-virtual-scroll-list'
   import Vue from 'vue'
 
   export default Vue.extend({
     name: 'InfiniteScrollingContainer',
-    components: { LoadMoreWidget, VirtualList },
+    components: { VirtualList },
     props: {
       externalScroll: {
         type: Number,
@@ -113,24 +113,24 @@
       :class="{ maxHeight: this.maxHeightVirtualList }"
     >
       <slot />
-      <LoadMoreWidget
+      <!-- <LoadMoreWidget
         :hideEmptyState="this.hideEmptyState"
         :view="this.view"
         :syncing="this.syncing"
         :hasMore="this.moreItems"
         @load="this.loadMore"
-      />
+      /> -->
     </VirtualList>
 
     <div v-else class="noVirtualList">
       <slot />
-      <LoadMoreWidget
+      <!-- <LoadMoreWidget
         :hideEmptyState="this.hideEmptyState"
         :view="this.view"
         :syncing="this.syncing"
         :hasMore="this.moreItems"
         @load="this.loadMore"
-      />
+      /> -->
     </div>
   </div>
 </template>
