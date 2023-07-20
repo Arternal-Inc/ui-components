@@ -1,9 +1,6 @@
 <script lang='coffee'>
-  LoadingSpinner = require '@/components/LoadingSpinner'
-
   exports.default =
     name: 'LoadMoreWidget'
-    components: { LoadingSpinner }
     props:
       syncing:
         type: Boolean
