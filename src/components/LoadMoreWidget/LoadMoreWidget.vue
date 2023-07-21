@@ -66,8 +66,8 @@ const startLoad = () => {
   color: #2F80ED;
 }
 .LoadMoreWidget span:disabled {
-  color: darkGray;
-  cursor: default;
+  color: red;
+  cursor: default !important;
 }
 
 .LoadMoreWidget.grid {
