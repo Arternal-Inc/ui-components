@@ -24,9 +24,9 @@ const props = withDefaults(
 
 const statusText = computed(() => {
   if (props.syncing)
-      return 'Loading...'
+      return props.hideSyncState ? '' : 'Loading...'
     else if (props.hasMore)
-      return props.hideSyncState ? '' : 'Load More'
+      return 'Load More'
     else if (props.hideEmptyState)
       return ''
     else
