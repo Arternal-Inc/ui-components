@@ -40,7 +40,7 @@ const startLoad = () => {
 
 <template>
   <div class="LoadMoreWidget" :class="[view, { hasMore: hasMore }]" @click="startLoad">
-    <span :class="{ disabled: !hasMore, 'loadMoreText': hasMore && !syncing }">{{ statusText }}</span>
+    <span :disabled="!hasMore" :class="{ 'loadMoreText': hasMore && !syncing }">{{ statusText }}</span>
   </div>
 </template>
 
@@ -67,7 +67,6 @@ const startLoad = () => {
 }
 .LoadMoreWidget span:disabled {
   color: darkGray;
-  opacity: 0.6;
   cursor: default;
 }
 
