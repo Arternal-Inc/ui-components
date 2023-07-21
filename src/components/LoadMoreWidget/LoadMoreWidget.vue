@@ -57,7 +57,7 @@ const startLoad = () => {
 
 .LoadMoreWidget span {
   text-transform: none;
-  color: darkGray;
+  color: #8E8E93;
   font-weight: 600;
   cursor: pointer;
   user-select: none;
@@ -66,7 +66,7 @@ const startLoad = () => {
   color: #2F80ED;
 }
 .LoadMoreWidget span.disabled {
-  color: red;
+  color: darkGray;
   cursor: default;
 }
 
