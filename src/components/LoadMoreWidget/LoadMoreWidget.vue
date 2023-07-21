@@ -7,16 +7,17 @@ const emit = defineEmits<{
 
 const props = withDefaults(
   defineProps<{
-    syncing: boolean
-    hasMore: boolean
-    view: string
-    hideEmptyState: [boolean, string]
-    hideSyncState: boolean
+    syncing?: boolean
+    hasMore?: boolean
+    view?: string
+    hideEmptyState?: boolean
+    hideSyncState?: boolean
   }>(),
   {
     syncing: false,
     hasMore: false,
     view: 'grid',
+    hideEmptyState: false,
     hideSyncState: false,
   }
 )
