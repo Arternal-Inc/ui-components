@@ -12,6 +12,7 @@ import ReportsIcon from "./ReportsIcon.svg";
 import SettingsIcon from "./DealsIcon.svg";
 import SmartMailIcon from "./SmartMailIcon.svg";
 import TransactionIcon from "./TransactionIcon.svg";
+import NoAccountIcon from "./NoAccountIcon.svg";
 
 export {
   ArternalIcon,
@@ -28,4 +29,5 @@ export {
   SettingsIcon,
   SmartMailIcon,
   TransactionIcon,
+  NoAccountIcon,
 };
