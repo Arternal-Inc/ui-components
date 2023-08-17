@@ -37,7 +37,7 @@ async function authLogout() {
     <Transition>
       <div
         v-if="isOpen"
-        class="z-10 w-44 bg-zinc-800 rounded divide-y divide-gray-100 shadow ml-3 mb-1"
+        class="z-10 w-auto pr-5 bg-zinc-800 rounded divide-y divide-gray-100 shadow ml-3 mb-1"
       >
         <ul class="py-1 text-sm text-gray-300 text-left">
           <li>
@@ -68,7 +68,7 @@ async function authLogout() {
               target="_blank"
               class="block py-3 px-4 hover:bg-zinc-700 text-gray-300 visited:text-gray-300 no-underline"
               >Help Center</a>
-            >
+            
           </li>
           <li>
             <a
