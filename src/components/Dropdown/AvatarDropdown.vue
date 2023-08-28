@@ -27,8 +27,8 @@ async function authLogout() {
     <button type="button" @click="toggle" class="w-[49px] border-0 mx-1.5 focus:border-0">
       <Avatar
         :rounded="true"
-        :initials="user.nickname"
-        :img="user.picture"
+        :initials="user?.nickname || ''"
+        :img="user?.picture || ''"
         class="avatar"
       />
     </button>
