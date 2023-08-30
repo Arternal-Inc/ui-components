@@ -5,6 +5,15 @@ import { onClickOutside } from '@vueuse/core'
 import { useAuth0 } from '@auth0/auth0-vue'
 import { useRouter } from 'vue-router'
 
+withDefaults(
+  defineProps<{
+    pictureOverride?: string;
+  }>(),
+  {
+    pictureOverride: '',
+  }
+);
+
 const { user, logout } = useAuth0()
 
 const router = useRouter()
@@ -28,7 +37,7 @@ async function authLogout() {
       <Avatar
         :rounded="true"
         :initials="user?.nickname || ''"
-        :img="user?.picture || ''"
+        :img="pictureOverride || user?.picture || ''"
         class="avatar"
       />
     </button>
