@@ -52,14 +52,14 @@ async function authLogout() {
           <li>
             <a
               :href="env.VITE_CRM_URL + '/settings/profile'"
-              class="block py-3 px-4 hover:bg-zinc-700 text-gray-300 visited:text-gray-300 no-underline"
+              class="block py-3 px-4 hover:bg-zinc-700 text-gray-300 visited:text-gray-300 !no-underline"
               >Settings</a
             >
           </li>
           <li>
             <a
               :href="env.VITE_CRM_URL + '/dashboard/import-export'"
-              class="block py-3 px-4 hover:bg-zinc-700 text-gray-300 visited:text-gray-300 no-underline"
+              class="block py-3 px-4 hover:bg-zinc-700 text-gray-300 visited:text-gray-300 !no-underline"
               >Import / Export</a
             >
           </li>
@@ -75,7 +75,7 @@ async function authLogout() {
             <a
               href="//intercom.help/arternal/en/"
               target="_blank"
-              class="block py-3 px-4 hover:bg-zinc-700 text-gray-300 visited:text-gray-300 no-underline"
+              class="block py-3 px-4 hover:bg-zinc-700 text-gray-300 visited:text-gray-300 !no-underline"
               >Help Center</a>
             
           </li>
@@ -83,7 +83,7 @@ async function authLogout() {
             <a
               href="//intercom.help/arternal/en/articles/4785386-arternal-release-notes"
               target="_blank"
-              class="block py-3 px-4 hover:bg-zinc-700 text-gray-300 visited:text-gray-300 no-underline"
+              class="block py-3 px-4 hover:bg-zinc-700 text-gray-300 visited:text-gray-300 !no-underline"
               >What's New?</a
             >
           </li>
@@ -91,7 +91,7 @@ async function authLogout() {
             <button
               type="button"
               @click="authLogout()"
-              class="block py-3 px-4 hover:bg-zinc-700 text-gray-300 visited:text-gray-300 no-underline"
+              class="block py-3 px-4 hover:bg-zinc-700 text-gray-300 visited:text-gray-300 !no-underline"
             >
               Logout
             </button>
