@@ -91,7 +91,7 @@ async function authLogout() {
             <button
               type="button"
               @click="authLogout()"
-              class="block py-3 px-4 hover:bg-zinc-700 text-gray-300 visited:text-gray-300 !no-underline"
+              class="w-full text-left py-3 px-4 hover:bg-zinc-700 text-gray-300 visited:text-gray-300 !no-underline"
             >
               Logout
             </button>
