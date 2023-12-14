@@ -13,7 +13,7 @@ import SettingsIcon from "./DealsIcon.svg";
 import SmartMailIcon from "./SmartMailIcon.svg";
 import TransactionIcon from "./TransactionIcon.svg";
 import NoAccountIcon from "./NoAccountIcon.svg";
-import SolidDealsIcon from "./SolidDealsIcon.svg"
+import SolidDealsIcon from "./SolidDealsIcon.svg";
 
 export {
   ArternalIcon,
