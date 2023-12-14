@@ -31,3 +31,5 @@ export {
   TransactionIcon,
   NoAccountIcon,
 };
+
+export * from './DealsMenu'
