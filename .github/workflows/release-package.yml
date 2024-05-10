@@ -17,6 +17,7 @@ jobs:
         with:
           node-version: 21
       - run: npm version patch
+      - run: git push "https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" "${{ github.head_ref }}"
       - run: npm ci
       - run: npm test
 
