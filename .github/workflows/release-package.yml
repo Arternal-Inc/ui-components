@@ -3,6 +3,10 @@ name: Arternal UI
 # on:
 #   release:
 #     types: [created]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   build:
