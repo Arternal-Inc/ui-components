@@ -16,6 +16,19 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 21
+
+      - name: Get previous tag
+        id: previoustag
+        uses: 'WyriHaximus/github-action-get-previous-tag@v1'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Get next minor version
+        id: semver
+        uses: 'WyriHaximus/github-action-next-semvers@v1'
+        with:
+          version: ${{ steps.previoustag.outputs.tag }}
+
       - run: npm ci
       - run: npm test
 
