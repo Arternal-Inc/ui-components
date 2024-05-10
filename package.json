@@ -10,7 +10,7 @@
   "author": "Mir Adnan",
   "license": "ISC",
   "publishConfig": {
-    "@miradnan:registry": "https://npm.pkg.github.com"
+    "@Arternal-Inc:registry": "https://npm.pkg.github.com"
   },
   "dependencies": {
     "@vueuse/core": "^8.6.0",
