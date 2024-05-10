@@ -4,7 +4,7 @@
   "description": "Arternal UI Components",
   "main": "index",
   "scripts": {
-    "test": "jest"
+    "test": "jest --passWithNoTests"
   },
   "types": "./src/types/index.d.ts",
   "author": "Mir Adnan",
