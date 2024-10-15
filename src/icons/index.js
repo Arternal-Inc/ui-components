@@ -14,6 +14,7 @@ import SmartMailIcon from "./SmartMailIcon.svg";
 import TransactionIcon from "./TransactionIcon.svg";
 import NoAccountIcon from "./NoAccountIcon.svg";
 import SolidDealsIcon from "./SolidDealsIcon.svg";
+import OvrIcon from "./OvrIcon.svg";
 
 export {
   ArternalIcon,
@@ -32,6 +33,7 @@ export {
   SmartMailIcon,
   TransactionIcon,
   NoAccountIcon,
+  OvrIcon,
 };
 
 export * from './DealsMenu'
