@@ -15,6 +15,7 @@ import TransactionIcon from "./TransactionIcon.svg";
 import NoAccountIcon from "./NoAccountIcon.svg";
 import SolidDealsIcon from "./SolidDealsIcon.svg";
 import OvrIcon from "./OvrIcon.svg";
+import AiAgentsIcon from "./AiAgentsIcon.svg";
 
 export {
   ArternalIcon,
@@ -34,6 +35,7 @@ export {
   TransactionIcon,
   NoAccountIcon,
   OvrIcon,
+  AiAgentsIcon,
 };
 
 export * from './DealsMenu'
