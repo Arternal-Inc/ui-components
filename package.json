@@ -7,6 +7,10 @@
     "test": "jest --passWithNoTests"
   },
   "types": "./src/types/index.d.ts",
+  "exports": {
+    ".": "./index.js",
+    "./types/movement": "./src/types/movement/index.ts"
+  },
   "author": "Mir Adnan",
   "license": "ISC",
   "publishConfig": {
